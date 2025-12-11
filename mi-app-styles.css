@@ -1,0 +1,290 @@
+* ==========================================================================
+ ESTILOS GENERALES Y RESPONSIVOS PARA MI APP PLUGIN
+ ========================================================================== */
+
+ /* --- Reset y Configuración Base --- */
+ * {
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ background-color: #f4f4f4;
+ margin: 0;
+ padding: 1rem;
+ color: #333;
+ line-height: 1.6;
+ }
+
+ /* --- Contenedor Principal --- */
+ .page-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ background: #fff;
+ padding: 2rem;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ }
+
+ /* --- Tipografía --- */
+ h1, h2, h3 {
+ color: #333;
+ line-height: 1.2;
+ }
+
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.5rem; margin-top: 2rem; }
+ h3 { font-size: 1.2rem; margin-top: 2em; }
+
+ /* --- Botones y Enlaces de Acción --- */
+ .button-action, .add-competition-btn, .submit-btn, .back-link {
+ display: inline-block;
+ padding: 0.6em 1.2em;
+ margin: 0.2em;
+ font-size: 1rem;
+ line-height: 1.4;
+ text-decoration: none;
+ border-radius: 5px;
+ border: 1px solid transparent;
+ cursor: pointer;
+ transition: all 0.2s ease-in-out;
+ }
+
+ .add-competition-btn { background-color: #0073aa; color: white; border-color: #005a87; }
+ .add-competition-btn:hover { background-color: #005a87; }
+
+ .submit-btn { background-color: #28a745; color: white; border-color: #1e7e34; width: 100%; }
+ .submit-btn:hover { background-color: #1e7e34; }
+
+ .back-link { background-color: #6c757d; color: white; border-color: #545b62; }
+ .back-link:hover { background-color: #545b62; }
+
+ .button-action {
+ background-color: #0073aa;
+ color: #fff;
+ border-color: #005a87;
+ font-size: 0.9rem;
+ padding: 0.4em 0.8em;
+ }
+
+ .button-action:hover { background-color: #005a87; }
+
+ .button-success-sm {
+ background-color: #5cb85c;
+ border-color: #4cae4c;
+ }
+ .button-success-sm:hover { background-color: #4cae4c; }
+
+ .edit-link { background-color: #ffc107; color: #212529; border-color: #d39e00; }
+ .edit-link:hover { background-color: #d39e00; }
+
+ .delete-link { background-color: #dc3545; color: white; border-color: #bd2130; }
+ .delete-link:hover { background-color: #bd2130; }
+
+
+ /* --- Sección de Cabecera --- */
+ .header-section {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 2rem;
+ border-bottom: 1px solid #eee;
+ padding-bottom: 1rem;
+ flex-wrap: wrap;
+ gap: 1rem;
+ }
+
+ /* --- Mensajes de Éxito y Error --- */
+ .success-message, .error-message {
+ padding: 1rem;
+ border-radius: 4px;
+ margin-bottom: 1.5rem;
+ text-align: center;
+ }
+ .success-message { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+ .error-message { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+
+ /* --- Tablas (Solución Responsive) --- */
+ .table-responsive {
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+ }
+
+ .competition-list table, .activities-table {
+ width: 100%;
+ min-width: 600px;
+ border-collapse: collapse;
+ margin-top: 1rem;
+ }
+
+ .competition-list th, .competition-list td,
+ .activities-table th, .activities-table td {
+ padding: 12px 8px;
+ border: 1px solid #ddd;
+ text-align: left;
+ vertical-align: top;
+ }
+
+ .competition-list th, .activities-table th {
+ background-color: #f2f2f2;
+ font-weight: bold;
+ }
+
+ /* --- Celda de Acciones --- */
+ .actions {
+ white-space: nowrap;
+ }
+ .actions .button-action {
+ margin-right: 5px;
+ margin-bottom: 5px;
+ }
+
+ /* --- Formularios --- */
+ .form-group {
+ margin-bottom: 1rem;
+ }
+ .form-group label {
+ display: block;
+ margin-bottom: 0.5rem;
+ font-weight: bold;
+ }
+ .form-group input[type="text"],
+ .form-group input[type="number"],
+ .form-group input[type="date"],
+ .form-group input[type="file"] {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ font-size: 16px;
+ }
+
+
+ /* --- Estilos Específicos para la Página de FAQ --- */
+ .faq-list {
+ margin-top: 2rem;
+ }
+
+ .faq-item {
+ background-color: #fff;
+ border: 1px solid #e0e0e0;
+ border-left: 5px solid #0073aa;
+ padding: 20px;
+ margin-bottom: 20px;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+ }
+
+ .faq-item .faq-question {
+ color: #0073aa;
+ font-size: 1.2em;
+ margin-top: 0;
+ margin-bottom: 10px;
+ cursor: pointer; /* Añadimos un cursor de puntero para sugerir que es interactivo */
+ }
+
+ .faq-item .faq-answer {
+ color: #555;
+ font-size: 1em;
+ line-height: 1.7;
+ }
+
+ .faq-item .faq-answer p {
+ margin-bottom: 0;
+ }
+
+ /* --- Modal --- */
+ .modal {
+ display: none;
+ position: fixed;
+ z-index: 1000;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgba(0,0,0,0.6);
+ }
+
+ .modal-content {
+ background-color: #fefefe;
+ margin: 5% auto;
+ padding: 20px;
+ border: 1px solid #888;
+ width: 90%;
+ max-width: 625px;
+ border-radius: 8px;
+ position: relative;
+ }
+
+ .close, .close-modal {
+ color: #aaa;
+ position: absolute;
+ top: 10px;
+ right: 20px;
+ font-size: 28px;
+ font-weight: bold;
+ cursor: pointer;
+ }
+ .close:hover, .close-modal:hover { color: black; }
+
+
+ /* --- Loader y Errores --- */
+ .loader {
+ border: 5px solid #f3f3f3;
+ border-top: 5px solid #3498db;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ animation: spin 1s linear infinite;
+ margin: 20px auto;
+ }
+ @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+ .error { color: #D63638; background-color: #fef7f7; border-left: 4px solid #D63638; padding: 10px; margin: 10px 0; }
+
+
+ /* ==========================================================================
+ MEDIA QUERIES PARA RESPONSIVE DESIGN
+ ========================================================================== */
+
+ /* --- Tablets y Phablets (pantallas de 768px o menos) --- */
+ @media (max-width: 768px) {
+ body { padding: 0.5rem; }
+ .page-container { padding: 1.5rem; }
+ h1 { font-size: 1.75rem; }
+ h2 { font-size: 1.4rem; }
+
+ .header-section {
+ flex-direction: column;
+ align-items: stretch;
+ text-align: center;
+ }
+
+ .actions {
+ display: flex;
+ flex-direction: column;
+ white-space: normal;
+ }
+ .actions .button-action {
+ margin-bottom: 10px;
+ text-align: center;
+ }
+ }
+
+ /* --- Móviles (pantallas de 480px o menos) --- */
+ @media (max-width: 480px) {
+ .page-container {
+ padding: 1rem;
+ border-radius: 0;
+ box-shadow: none;
+ }
+ h1 { font-size: 1.5rem; }
+
+ .modal-content {
+ width: 95%;
+ margin: 10% auto;
+ padding: 15px;
+ }
+ }
